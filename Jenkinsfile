@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     def buildNumber = env.BUILD_NUMBER
-                    def folderName = "${buildNumber}"
+                    def folderName = "build_${buildNumber}"
                     def zipFileName = "${folderName}.zip"
 
                     sh "ssh -o StrictHostKeyChecking=no ubuntu@3.82.155.56 'mkdir -p /var/www/html/${folderName}'"
