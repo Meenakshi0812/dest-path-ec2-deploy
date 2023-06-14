@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Git Repository') {
             steps {
                 script {
-                    def timestamp = new Date().format("yyyy-MM-dd-HH-mm")
+                    def timestamp = new Date().format("yyyy-MM-dd")
                     def sourcePath = "/home/ubuntu/${timestamp}"
                     def destinationPath = "/var/www/html/"
 
