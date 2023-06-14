@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     def buildNumber = env.BUILD_NUMBER
-                    def clonePath = "/home/ubuntu/build_${buildNumber}"
+                    def clonePath = "/home/ubuntu/${buildNumber}"
                     dir(clonePath) {
                         git branch: 'main', url: 'https://github.com/Meenakshi0812/dest-path-ec2-deploy.git'
                     }
